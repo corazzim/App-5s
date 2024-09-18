@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo"
+    tools:context=".check_list">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:orientation="vertical">
+
+
+        <Spinner
+
+            android:id="@+id/spinner_maquinas"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/title_seiri"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_bg"
+            android:text="Seiri (Senso de Utilização)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Contêiner para Perguntas e CheckBoxes -->
+        <LinearLayout
+            android:id="@+id/content_seiri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"> <!-- Inicialmente oculto -->
+
+            <!-- Pergunta 1 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. Somente os materiais necessários estão presentes na área de trabalho?"
+                android:layout_marginBottom="8dp" />
+
+            <!-- CheckBoxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <CheckBox
+                    android:id="@+id/check_seiri_task_1_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sim" />
+
+                <CheckBox
+                    android:id="@+id/check_seiri_task_1_nok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Não" />
+            </LinearLayout>
+
+            <!-- Pergunta 2 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. Os itens desnecessários foram descartados ou armazenados corretamente?"
+                android:layout_marginBottom="8dp" />
+
+            <!-- CheckBoxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <CheckBox
+                    android:id="@+id/check_seiri_task_2_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sim" />
+
+                <CheckBox
+                    android:id="@+id/check_seiri_task_2_nok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Não" />
+            </LinearLayout>
+
+            <!-- Pergunta 3 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. Todos os itens essenciais estão identificados e disponíveis?"
+                android:layout_marginBottom="8dp" />
+
+            <!-- CheckBoxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <CheckBox
+                    android:id="@+id/check_seiri_task_3_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sim" />
+
+                <CheckBox
+                    android:id="@+id/check_seiri_task_3_nok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Não" />
+            </LinearLayout>
+
+            <!-- Pergunta 4 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4. Há algum item obstruindo áreas de passagem ou acesso a equipamentos?"
+                android:layout_marginBottom="8dp" />
+
+            <!-- CheckBoxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <CheckBox
+                    android:id="@+id/check_seiri_task_4_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sim" />
+
+                <CheckBox
+                    android:id="@+id/check_seiri_task_4_nok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Não" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/title_seiton"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:padding="8dp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_bg"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:text="Seiton (Senso de Organização)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Contêiner para Perguntas e CheckBoxes -->
+        <LinearLayout
+            android:id="@+id/content_seiton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"> <!-- Inicialmente oculto -->
+
+            <!-- Pergunta 1 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. As ferramentas estão organizadas e em locais designados?"
+                android:layout_marginBottom="8dp" />
+
+            <!-- CheckBoxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <CheckBox
+                    android:id="@+id/check_seiton_task_1_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sim" />
+
+                <CheckBox
+                    android:id="@+id/check_seiton_task_1_nok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Não" />
+            </LinearLayout>
+
+            <!-- Pergunta 2 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. Os itens de uso frequente estão facilmente acessíveis?"
+                android:layout_marginBottom="8dp" />
+
+            <!-- CheckBoxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <CheckBox
+                    android:id="@+id/check_seiton_task_2_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sim" />
+
+                <CheckBox
+                    android:id="@+id/check_seiton_task_2_nok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Não" />
+            </LinearLayout>
+
+            <!-- Pergunta 3 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. As áreas de trabalho e de armazenamento estão claramente identificadas?"
+                android:layout_marginBottom="8dp" />
+
+            <!-- CheckBoxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <CheckBox
+                    android:id="@+id/check_seiton_task_3_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sim" />
+
+                <CheckBox
+                    android:id="@+id/check_seiton_task_3_nok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Não" />
+            </LinearLayout>
+
+            <!-- Pergunta 4 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4. Todos os locais de armazenamento possuem rótulos claros e legíveis?"
+                android:layout_marginBottom="8dp" />
+
+            <!-- CheckBoxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <CheckBox
+                    android:id="@+id/check_seiton_task_4_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sim" />
+
+                <CheckBox
+                    android:id="@+id/check_seiton_task_4_nok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Não" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/title_seiso"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:padding="8dp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_bg"
+            android:layout_marginTop="16dp"
+            android:text="Seiso (Senso de Limpeza)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Contêiner para Perguntas e CheckBoxes -->
+        <LinearLayout
+            android:id="@+id/content_seiso1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"> <!-- Inicialmente oculto -->
+
+            <!-- Pergunta 1 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. Os equipamentos estão limpos e sem acúmulo de sujeira?"
+                android:layout_marginBottom="8dp" />
+
+            <!-- CheckBoxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <CheckBox
+                    android:id="@+id/check_seiso_task_1_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sim" />
+
+                <CheckBox
+                    android:id="@+id/check_seiso_task_1_nok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Não" />
+            </LinearLayout>
+
+            <!-- Pergunta 2 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. O piso está livre de sujeira, óleos ou obstruções?"
+                android:layout_marginBottom="8dp" />
+
+            <!-- CheckBoxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <CheckBox
+                    android:id="@+id/check_seiso_task_2_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sim" />
+
+                <CheckBox
+                    android:id="@+id/check_seiso_task_2_nok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Não" />
+            </LinearLayout>
+
+            <!-- Pergunta 3 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. As bancadas e superfícies de trabalho estão limpas?"
+                android:layout_marginBottom="8dp" />
+
+            <!-- CheckBoxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <CheckBox
+                    android:id="@+id/check_seiso_task_3_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sim" />
+
+                <CheckBox
+                    android:id="@+id/check_seiso_task_3_nok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Não" />
+            </LinearLayout>
+
+            <!-- Pergunta 4 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4. Os resíduos estão sendo descartados corretamente e sem acúmulo?"
+                android:layout_marginBottom="8dp" />
+
+            <!-- CheckBoxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <CheckBox
+                    android:id="@+id/check_seiso_task_4_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sim" />
+
+                <CheckBox
+                    android:id="@+id/check_seiso_task_4_nok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Não" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/title_seike"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:padding="8dp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_bg"
+            android:layout_marginTop="16dp"
+            android:text="Seiketsu (Senso de Padronização)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Contêiner para Perguntas e CheckBoxes -->
+        <LinearLayout
+            android:id="@+id/content_seike1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"> <!-- Inicialmente oculto -->
+
+            <!-- Pergunta 1 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. Os procedimentos de trabalho estão padronizados e sendo seguidos?"
+                android:layout_marginBottom="8dp" />
+
+            <!-- CheckBoxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <CheckBox
+                    android:id="@+id/check_seike_task_1_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sim" />
+
+                <CheckBox
+                    android:id="@+id/check_seike_task_1_nok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Não" />
+            </LinearLayout>
+
+            <!-- Pergunta 2 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. As práticas de armazenamento seguem um padrão consistente?"
+                android:layout_marginBottom="8dp" />
+
+            <!-- CheckBoxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <CheckBox
+                    android:id="@+id/check_seike_task_2_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sim" />
+
+                <CheckBox
+                    android:id="@+id/check_seike_task_2_nok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Não" />
+            </LinearLayout>
+
+            <!-- Pergunta 3 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. Todos estão usando uniformes e EPI de acordo com o padrão?"
+                android:layout_marginBottom="8dp" />
+
+            <!-- CheckBoxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <CheckBox
+                    android:id="@+id/check_seike_task_3_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sim" />
+
+                <CheckBox
+                    android:id="@+id/check_seike_task_3_nok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Não" />
+            </LinearLayout>
+
+            <!-- Pergunta 4 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.  Existem rotinas de limpeza definidas e padronizadas sendo seguidas?"
+                android:layout_marginBottom="8dp" />
+
+            <!-- CheckBoxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <CheckBox
+                    android:id="@+id/check_seike_task_4_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sim" />
+
+                <CheckBox
+                    android:id="@+id/check_seike_task_4_nok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Não" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/title_shitsuke"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:padding="8dp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_bg"
+            android:layout_marginTop="16dp"
+            android:text="Seiketsu (Senso de Padronização)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Contêiner para Perguntas e CheckBoxes -->
+        <LinearLayout
+            android:id="@+id/content_shitsuke1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"> <!-- Inicialmente oculto -->
+
+            <!-- Pergunta 1 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. Todos estão cumprindo as regras estabelecidas para a área de trabalho?"
+                android:layout_marginBottom="8dp" />
+
+            <!-- CheckBoxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <CheckBox
+                    android:id="@+id/check_shitsuke_task_1_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sim" />
+
+                <CheckBox
+                    android:id="@+id/check_shitsuke_task_1_nok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Não" />
+            </LinearLayout>
+
+            <!-- Pergunta 2 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. Há identificação e reporte de pontos de melhoria contínua?"
+                android:layout_marginBottom="8dp" />
+
+            <!-- CheckBoxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <CheckBox
+                    android:id="@+id/check_shitsuke_task_2_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sim" />
+
+                <CheckBox
+                    android:id="@+id/check_shitsuke_task_2_nok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Não" />
+            </LinearLayout>
+
+            <!-- Pergunta 3 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. As rotinas diárias são respeitadas por todos?"
+                android:layout_marginBottom="8dp" />
+
+            <!-- CheckBoxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <CheckBox
+                    android:id="@+id/check_shitsuke_task_3_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sim" />
+
+                <CheckBox
+                    android:id="@+id/check_shitsuke_task_3_nok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Não" />
+            </LinearLayout>
+
+            <!-- Pergunta 4 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.   Os colaboradores são pontuais e organizados em suas tarefas?"
+                android:layout_marginBottom="8dp" />
+
+            <!-- CheckBoxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <CheckBox
+                    android:id="@+id/check_shitsuke_task_4_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sim" />
+
+                <CheckBox
+                    android:id="@+id/check_shitsuke_task_4_nok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Não" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_marginTop="36dp"
+            android:id="@+id/editTextObservacao"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:hint="Observação"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:minLines="3"
+            android:padding="10dp"
+            android:background="@drawable/caixa_observa"
+            />
+
+
+        <Button
+            android:id="@+id/button_send"
+            android:layout_marginTop="48dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:text="Enviar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/image_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/check_positive"
+            android:visibility="gone"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
